@@ -1,0 +1,122 @@
+@charset "utf-8";
+/*
+Archive Styles
+Theme Name:     Benji Blaze
+Description:    Benji Blaze Website Theme based on the Benjamin Wiederkehr Blog Style 2010
+Version:        0.1
+Domain:         benjiblaze.com
+Author:         Benjamin Wiederkehr
+Start:          140107_BW
+Last update:    140909_BW
+*/
+
+/* OVERWRITE
+/////////////////////////////////////////////////////////////////*/
+body	{
+  font-family: "ltc-bodoni-175",Times, serif;
+  background: #1d0a1c url(img/benjiblaze_background.jpg);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+h3.ui {
+  border-bottom: 3px double #d4d5d3;
+  color: #aaa;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+}
+::selection {
+  background: rgba(132, 46, 127, 0.2);
+}
+/*
+HEADER
+/////////////////////////////////////////////////////////////////*/
+#header           { height: 210px; padding-top: 30px;}
+#header h1        { margin: 0;}
+#header h1 a      { display: block;}
+#header h1 a img	{ float: none;}
+
+/* CONTENT
+/////////////////////////////////////////////////////////////////*/
+#content          { padding-bottom: 72px; float: right;}
+#content-header   { height: 170px; padding-top: 30px;}
+#content-header h1{ margin-top: 99px;}
+
+/* EVENTS
+/////////////////////////////////////////////////////////////////*/
+#em-wrapper > p { display: none;}
+.events         { }
+.event          { border-bottom: 1px solid #d4d5d3; position: relative; line-height: 1; padding: 10px 0 15px; text-transform: uppercase;}
+.event__date    { color: rgba(255,255,255,0.25); float:right; font-size: 32px; font-style: italic; letter-spacing: -2px; }
+.event__title   { color: #fff; font-size: 48px; letter-spacing: -2px;}
+.event__title a,
+.event__title a:hover  { color: inherit; font-weight: normal;}
+.event__location{ font-style: italic; letter-spacing: -1px;}
+.event__location__name { color: rgba(255,255,255,0.25); display: inline-block; font-size: 24px; }
+.event__location__city { color: rgba(255,255,255,0.25); display: inline-block; font-size: 16px; position: relative; top: -5px;}
+.event__details { color: rgba(255,255,255,0.5); margin: 10px 0 0; font-size: 16px; line-height: 1.2; transition: opacity 600ms;}
+.event__details__key   { font-style: italic; min-width: 7em;}
+.event__details__value { }
+.event__link { color: rgba(255,255,255,0.5); font-weight: normal; text-decoration: underline;}
+.event__link:hover { color: #fff;}
+
+/*
+MESSAGE
+/////////////////////////////////////////////////////////////////*/
+.message {
+  color: #fff;
+  margin: 15px 0 40px;
+}
+
+/*
+PAGINATION
+/////////////////////////////////////////////////////////////////*/
+.pagination .alignright	{ float: right; text-align: right;}
+.pagination .alignleft	{ float: left;}
+
+/*
+SIDEBAR
+/////////////////////////////////////////////////////////////////*/
+.sidebar                { float: left;}
+.sidebar a							{ color: #aaa; font-weight: normal; text-decoration: none; text-transform: uppercase;}
+.sidebar a:hover				{ color: #fff;}
+.sidebar p.lead					{ color: #aaa; font-size: 14px; font-style: italic; margin: 15px 0 40px;}
+.sidebar ul							{ font-size: 12px; line-height: 30px; list-style: none; margin: 0 0 40px; padding: 0;}
+.sidebar ul li					{ }
+.sidebar ul li a				{ display: block; border-bottom: 1px solid rgba(255,255,255,0.25);}
+.sidebar ul li a:hover	{ text-decoration: none; border-bottom: 1px solid #fff; outline: none;}
+.sidebar ul li a .icon  { display: block; line-height: 30px; float: right;}
+
+/*
+RESPONSIVE
+/////////////////////////////////////////////////////////////////*/
+@media (max-width: 767px) {
+
+  #header { height: auto;}
+  #header h1 { text-align: center;}
+
+  .event          { text-align: center;}
+  .event__date    { float: none; font-size: 24px; }
+  .event__title   { font-size: 32px; line-height: 1.5;}
+  .event__details { font-size: 14px;}
+  .event__details__key { display: none;}
+  .event__location__name { display: block;}
+  .event__location__city { display: block; top: 0;}
+
+  h3.ui           { text-align: center;}
+  .sidebar p.lead { font-size: 18px; text-align: center;}
+  .sidebar ul     { font-size: 14px;}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  #header           { height: 160px;}
+  #header h1 a img  { width: 140px; height: 140px;}
+}
+@media (min-width: 979px) {
+  .event__details{ opacity: 0;}
+  .event--single .event__details,
+  .event:hover .event__details{ opacity: 1;}
+}
